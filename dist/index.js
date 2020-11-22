@@ -17,14 +17,13 @@ try {
     " on repo ",
     github.context.repo.repo
   );
-  fetch({
-    url: "https://cyolrzfuz3.execute-api.us-east-1.amazonaws.com/dev/grade",
+  fetch("https://cyolrzfuz3.execute-api.us-east-1.amazonaws.com/dev/grade", {
     method: "POST",
-    body: {
+    body: JSON.stringify({
       student: github.context.repo.owner,
       project: github.context.repo.repo,
       score: report.stats.passPercent,
-    },
+    }),
   }).then(() => {
     core.setOutput("score", report.stats.passPercent);
   });
