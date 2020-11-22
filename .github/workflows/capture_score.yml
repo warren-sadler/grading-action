@@ -1,13 +1,13 @@
 on: [push]
 jobs:
   capture_score:
-    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: yarn
       - name: run_tests
+        continue-on-error: true
         run: yarn cy:run
       - name: get_score
         id: score
