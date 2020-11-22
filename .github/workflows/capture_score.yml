@@ -10,4 +10,4 @@ jobs:
         id: test
         run: yarn cy:run
       - name: report_grade
-        run: echo ${{ steps.test.outputs.score }}
+        run: echo "${{ steps.test.outputs.score }}"
