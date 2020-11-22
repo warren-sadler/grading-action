@@ -8,7 +8,6 @@ module.exports =
 const core = __webpack_require__(173);
 const github = __webpack_require__(687);
 const fetch = __webpack_require__(932);
-const { reporters } = __webpack_require__(764);
 const report = __webpack_require__(574);
 
 try {
@@ -56,14 +55,6 @@ module.exports = eval("require")("@actions/github");
 /***/ ((module) => {
 
 module.exports = eval("require")("isomorphic-fetch");
-
-
-/***/ }),
-
-/***/ 764:
-/***/ ((module) => {
-
-module.exports = eval("require")("mocha");
 
 
 /***/ }),

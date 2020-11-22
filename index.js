@@ -1,7 +1,6 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
 const fetch = require("isomorphic-fetch");
-const { reporters } = require("mocha");
 const report = require("./cypress-tests-report.json");
 
 try {
