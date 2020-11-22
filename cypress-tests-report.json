@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 3,
-    "passes": 3,
+    "passes": 2,
     "pending": 0,
-    "failures": 0,
-    "start": "2020-11-22T15:55:07.852Z",
-    "end": "2020-11-22T15:55:08.052Z",
-    "duration": 184,
+    "failures": 1,
+    "start": "2020-11-22T18:36:37.693Z",
+    "end": "2020-11-22T18:36:42.195Z",
+    "duration": 4458,
     "testsRegistered": 3,
-    "passPercent": 100,
+    "passPercent": 66.66666666666667,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8d38e0b3-7002-4299-918a-6aa1af232c21",
+      "uuid": "d8fa1b50-eefe-4664-94a0-7a0a01683fd9",
       "title": "",
       "fullFile": "cypress/integration/myFirstWebsite.js",
       "file": "cypress/integration/myFirstWebsite.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3ee6a77d-9530-4768-adda-a98bf31a7b32",
+          "uuid": "101f362f-23a4-47da-af23-a99f1f2500d8",
           "title": "My First Website",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Has the correct title",
               "fullTitle": "My First Website Has the correct title",
               "timedOut": null,
-              "duration": 94,
+              "duration": 98,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "expect(cy.title(), \"Hello World\");",
               "err": {},
-              "uuid": "8a9b883b-3440-43fb-92e3-5784dd343721",
-              "parentUUID": "3ee6a77d-9530-4768-adda-a98bf31a7b32",
+              "uuid": "e805a8be-773f-4ee2-92a4-ab36ecf2c099",
+              "parentUUID": "101f362f-23a4-47da-af23-a99f1f2500d8",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Has an H2",
               "fullTitle": "My First Website Has an H2",
               "timedOut": null,
-              "duration": 48,
+              "duration": 57,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "expect(cy.get(\"h2\")).exist;",
               "err": {},
-              "uuid": "28757a45-ad1a-48d0-b47f-8b1deef06a9c",
-              "parentUUID": "3ee6a77d-9530-4768-adda-a98bf31a7b32",
+              "uuid": "0d65383f-270d-4bc0-840b-45cd456239d3",
+              "parentUUID": "101f362f-23a4-47da-af23-a99f1f2500d8",
               "isHook": false,
               "skipped": false
             },
@@ -74,31 +74,36 @@
               "title": "Has an H2 with the correct text",
               "fullTitle": "My First Website Has an H2 with the correct text",
               "timedOut": null,
-              "duration": 42,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
-              "fail": false,
+              "duration": 4303,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.get(\"h2\").contains(\"My First Website\");",
-              "err": {},
-              "uuid": "91c55264-d5fe-4bfd-b64f-ed51316aa216",
-              "parentUUID": "3ee6a77d-9530-4768-adda-a98bf31a7b32",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'My First Website' within the element: <h2> but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'My First Website' within the element: <h2> but never did.\n    at Context.eval (http://localhost:65135/__cypress/tests?p=cypress/integration/myFirstWebsite.js:111:18)",
+                "diff": null
+              },
+              "uuid": "443464bb-7492-4e8a-bd54-5e817386767b",
+              "parentUUID": "101f362f-23a4-47da-af23-a99f1f2500d8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8a9b883b-3440-43fb-92e3-5784dd343721",
-            "28757a45-ad1a-48d0-b47f-8b1deef06a9c",
-            "91c55264-d5fe-4bfd-b64f-ed51316aa216"
+            "e805a8be-773f-4ee2-92a4-ab36ecf2c099",
+            "0d65383f-270d-4bc0-840b-45cd456239d3"
           ],
-          "failures": [],
+          "failures": [
+            "443464bb-7492-4e8a-bd54-5e817386767b"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 184,
+          "duration": 4458,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
