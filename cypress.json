@@ -1,0 +1,8 @@
+{
+    "reporter": "./node_modules/mochawesome/src/mochawesome.js",
+    "reportOptions": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+}

@@ -1,0 +1,8 @@
+name: Pivot Grader
+description: 'Record the output of a test-reports'
+outputs:
+  score:
+    description: 'The score from the test-report'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
