@@ -10,6 +10,6 @@ jobs:
         run: yarn cy:run
       - name: get_score
         id: score
-        uses: warren-sadler/grading-action@v2
+        uses: warren-sadler/grading-action@v3
       - name: report_grade
         run: echo "${{ steps.score.outputs.score }}"
