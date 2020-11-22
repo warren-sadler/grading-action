@@ -1,9 +1,10 @@
+const fs = require("fs");
 const core = require("@actions/core");
 const github = require("@actions/github");
 const fetch = require("isomorphic-fetch");
-const report = require("./cypress-tests-report.json");
 
 try {
+  const report = JSON.parse(fs.readFileSync("./cypress-tests-report.json"));
   console.log(
     "Capturing score for ",
     github.context.repo.owner,
